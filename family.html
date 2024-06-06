@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #E8DAEF;
+    }
+
+    header {
+      height: 60px;
+      background: #262626;
+      padding: 0 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-upper-left-radius: 20px;
+      border-upper-right-radius: 20px;
+    }
+
+    header h1 {
+      font-family: 'Comic Sans MS', sans-serif;
+      color: #BFC9CA;
+      margin: 0;
+    }
+
+	nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #7FB3D5;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+	
+	nav ul li a:hover{
+      color: white;
+    }
+	
+    table, th, td {
+      border: 1px solid black;
+      color: #9B1A58; /* Added semicolon and fixed the color property */
+      font-family: "Playpen Sans", cursive;
+	  font-weight: 600;
+      text-align: center; /* Center aligning the text within cells */
+    }
+
+    /* Centering the table */
+    table {
+      margin: 0 auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+      opacity: 0.8; 
+      cursor: pointer; 
+    }
+
+    .column img:hover {
+      opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* The expanding image container */
+    .container {
+      position: relative;
+      display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-size: 20px;
+    }
+
+    /* Closable button inside the expanded image */
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
+	
+	
+	
+</style>
+</head>
+ <header>
+      <h1>saraheyyo_o</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about me.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#"class="active">My Family</a></li>
+                <li><a href="friend.html">My Friend</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="social media.html">Social Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<center><img src="image/my family.png" alt="my family" width="13%" height="10%"></center>
+
+  <table>
+    <tr>
+      <th><img src="image/abah umi.jpg" alt="abah & umi" width="50%" height="40%"></th>
+      <th><img src="image/family 1.jpg" alt="my family" width="50%" height="40%"></th> 
+      <th><img src="image/opah.jpg" alt="opah" width="50%" height="40%"></th>
+    </tr>
+    <tr>
+      <td><p>This is my parents, I call my father is abah and my mother is umi</p>
+        <p>abah born in 1st August 1966</p> 
+        <p>abah passed away in 23rd July 2021</p>
+        <p>umi born in 1st July 1968</p></td>
+      <td><p>This is my family, from left to center are my sister, me, and my eldest sister</p> 
+        <p>eldest sister born in 7th August 1994</p>
+        <p>sister born in 22nd November 1996</p></td>
+      <td><p>This is my gramma, I call her opah</p>
+        <p>she is umi's mother</p>
+        <p>opah born in 4th August 1947</p>
+        <p>me and mom live together with gramma after my granpa passed away</p></td>
+    </tr>
+  </table>
+<br>
+<center><img src="image/my big family.png" alt="my big family" width="13%" height="10%"></center>
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="image/cousin 2.jpg" alt="my uncle & aunt on my dad side" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image/cousin 3.jpg" alt="my cousin on dad side" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image/cousin 4.jpg" alt="my cousin on my mom side" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="image/cousin 5.jpeg" alt="cousin that same age on my mom side" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

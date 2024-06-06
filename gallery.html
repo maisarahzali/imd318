@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wellfleet&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #E8DAEF;
+    }
+
+    header {
+      height: 60px;
+      background: #262626;
+      padding: 0 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-upper-left-radius: 20px;
+      border-upper-right-radius: 20px;
+    }
+
+    header h1 {
+      font-family: 'Comic Sans MS', sans-serif;
+      color: #BFC9CA;
+      margin: 0;
+    }
+
+	nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #7FB3D5;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+	
+	nav ul li a:hover{
+      color: white;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      color: #B8860B;
+      font-family: verdana;
+      text-align: center;
+    }
+
+    table {
+      margin: 0 auto;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .image-box {
+      position: relative;
+      width: 350px;
+      height: 300px;
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+	
+	.image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-box:hover .image-caption {
+      opacity: 1;
+    }
+	
+    .video-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .video-box {
+      position: relative;
+      width: 350px;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-box:hover .video-caption {
+      opacity: 1;
+    }
+	
+  </style>
+</head>
+<body>
+<header>
+  <h1>saraheyyo_o</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about me.html">About Me</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="family.html">My Family</a></li>
+      <li><a href="friend.html">My Friend</a></li>
+      <li><a href="#"class="active">Gallery</a></li>
+      <li><a href="social media.html">Social Media</a></li>
+    </ul>
+  </nav>
+</header>
+<br>
+<br>
+<br>
+<center><h1><font face="Wellfleet" color="#A61212">PHOTOS</font></h1></center>
+  <div class="gallery">
+    <div class="image-box">
+      <img src="image/family 3.jpg" alt="my family">
+      <div class="image-caption">angah, umi & me</div>
+    </div>
+    <div class="image-box">
+      <img src="image/family 4.jpg" alt="my family">
+      <div class="image-caption">angah, opah & me</div>
+    </div>
+    <div class="image-box">
+      <img src="image/ica.jpg" alt="ica">
+      <div class="image-caption">Benchaq's daughter, Ica</div>
+    </div>
+    <div class="image-box">
+      <img src="image/nora.jpg" alt="nora">
+      <div class="image-caption">Benchik's daughter, Naura</div>
+    </div>
+    <div class="image-box">
+      <img src="image/family 2.jpg" alt="family">
+      <div class="image-caption">along, umi, me & angah</div>
+    </div>
+    <div class="image-box">
+      <img src="image/umi.jpg" alt="umi">
+      <div class="image-caption">me and my beloved mom</div>
+    </div>
+    <div class="image-box">
+      <img src="image/cousin 1.jpg" alt="cousin">
+      <div class="image-caption">We are in same age  ≧◡≦</div>
+    </div>
+    <div class="image-box">
+      <img src="image/big family 1.jpg" alt="family">
+      <div class="image-caption">my mom's side of family</div>
+    </div>
+    <div class="image-box">
+      <img src="image/myself 2.jpg" alt="me">
+      <div class="image-caption">me in high school won national level competition</div>
+    </div>
+    <div class="image-box">
+      <img src="image/close friend 4.jpg" alt="close friend">
+      <div class="image-caption">me, paji & zai in high school</div>
+    </div>
+    <div class="image-box">
+      <img src="image/close friend 3.jpg" alt="close friend">
+      <div class="image-caption">my close friend love same thing, it is KPOP!</div>
+    </div>
+    <div class="image-box">
+      <img src="image/hostel 4.jpg" alt="hostel">
+      <div class="image-caption">aspuri having a special lesson in computer lab</div>
+    </div>
+    <div class="image-box">
+      <img src="image/hostel 3.jpg" alt="hostel">
+      <div class="image-caption">dinner together as hostel student</div>
+    </div>
+      <div class="image-box">
+      <img src="image/friend 1.jpg" alt="friend">
+      <div class="image-caption">Aimi, Alia, Amani, Aishah, Ruzain and Afif</div>
+    </div>
+    <div class="image-box">
+      <img src="image/friend 2.jpg" alt="friend">
+      <div class="image-caption">high school friend come to celebrate Raya in year 2023</div>
+    </div>
+    <div class="image-box">
+      <img src="image/hostel 6.jpg" alt="ica">
+      <div class="image-caption">me, ijah & mieja</div>
+    </div>
+    <div class="image-box">
+      <img src="image/dip friend 4.jpg" alt="dip friend">
+      <div class="image-caption">my close friend in diploma</div>
+    </div>
+    <div class="image-box">
+      <img src="image/dip friend 3.jpg" alt="friend">
+      <div class="image-caption">cocuriculum in diploma</div>
+    </div>
+    <div class="image-box">
+      <img src="image/dip friend 1.jpg" alt="friend">
+      <div class="image-caption">colour zumba</div>
+    </div>
+	<div class="image-box">
+      <img src="image/dip friend 6.jpg" alt="friend">
+      <div class="image-caption">night market</div>
+    </div>
+    <div class="image-box">
+      <img src="image/classmate dip 2.jpg" alt="friend">
+      <div class="image-caption">my classmate in diploma</div>
+    </div>
+  <div class="image-box">
+    <img src="image/cat 1.jpg" alt="cat">
+    <div class="image-caption">my cats</div>
+  </div>
+  <div class="image-box">
+    <img src="image/cat 2.jpg" alt="cat">
+    <div class="image-caption">My favourite, Loaf</div>
+  </div>
+  <div class="image-box">
+    <img src="image/cat 3.jpg" alt="cat">
+    <div class="image-caption">My lovers, BamBam & Bulat</div>
+  </div>   
+</div>
+<br>
+<br>
+<br>
+
+<center><h1><font face="Wellfleet" color="#A61212">VIDEOS</font></h1></center>
+
+<div class="video-container">
+  <div class="video-box">
+    <video controls>
+      <source src="video/budak.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  <div class="video-caption">My Favourite niece</div>
+</div>
+  <div class="video-box">
+    <video controls>
+      <source src="video/sarah.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  <div class="video-caption">her name is Maisarah too</div>
+ </div>
+  <div class="video-box">
+    <video controls>
+      <source src="video/close friend.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  <div class="video-caption">vacation in Kuala Lumpur</div>
+ </div>
+  <div class="video-box">
+    <video controls>
+      <source src="video/air terjun.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+   <div class="video-caption">hang out together</div>
+  </div>
+  
+  
+  
+</body>
+</html>
